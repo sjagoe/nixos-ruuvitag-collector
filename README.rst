@@ -24,3 +24,19 @@ Software
 5. influxdb 1.8 (https://docs.influxdata.com/influxdb/v1.8/)
 6. grafana (https://grafana.com/)
 7. [todo] kapacitor (https://docs.influxdata.com/kapacitor/v1.5/)
+
+
+License
+=======
+
+The original contents of this repository are provided under the
+3-clause BSD license.  Components that are adapted from other sources
+are provided under their own original licenses.
+
+
+Using this repository
+=====================
+
+This is not the canonical repository from which I deploy my own
+infrastructure, but rather a public copy of some of that
+configuration.  As such, it is not guaranteed to work out of the box.
