@@ -1,0 +1,25 @@
+# /etc/udev/rules.d/99-serial.rules
+# Copied from Raspbian's 99-com.rules
+
+# KERNEL=="ttyAMA[01]", PROGRAM="/bin/sh -c '\
+# 	if cmp -s /proc/device-tree/aliases/uart0 /proc/device-tree/aliases/serial0; then \
+# 		echo 0;\
+# 	elif cmp -s /proc/device-tree/aliases/uart0 /proc/device-tree/aliases/serial1; then \
+# 		echo 1; \
+# 	else \
+# 		exit 1; \
+# 	fi\
+# '", SYMLINK+="serial%c"
+
+# KERNEL=="ttyS0", PROGRAM="/bin/sh -c '\
+# 	if cmp -s /proc/device-tree/aliases/uart1 /proc/device-tree/aliases/serial0; then \
+# 		echo 0; \
+# 	elif cmp -s /proc/device-tree/aliases/uart1 /proc/device-tree/aliases/serial1; then \
+# 		echo 1; \
+# 	else \
+# 		exit 1; \
+# 	fi \
+# '", SYMLINK+="serial%c"
+
+# FIXME!
+KERNEL=="ttyAMA0", SYMLINK+="serial1"
