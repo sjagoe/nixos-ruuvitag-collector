@@ -14,6 +14,10 @@ in
   boot.loader.raspberryPi.version = 4;
   boot.kernelPackages = pkgs.linuxPackages_rpi4;
 
+  console = {
+    keyMap = "uk";
+  };
+
   networking.wireless = {
     enable = true;
   };
