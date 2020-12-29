@@ -114,8 +114,8 @@ in
   nixpkgs.config = {
     allowUnfree = true;
     packageOverrides = pkgs: with pkgs; {
-      ruuvitag-listener = callPackage ../pkgs/ruuvitag-listener { };
-      btuart = callPackage ../pkgs/btuart { };
+      ruuvitag-listener = callPackage ./pkgs/ruuvitag-listener { };
+      btuart = callPackage ./pkgs/btuart { };
     };
   };
 
