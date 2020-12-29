@@ -102,10 +102,10 @@ in
       script = ''
         /run/wrappers/bin/ruuvitag-listener | ${pkgs.netcat}/bin/nc 127.0.0.1 8094
       '';
+      startLimitIntervalSec = 0;
       serviceConfig = {
         Restart = "always";
         RestartSec = 30;
-        StartLimitIntervalSec = 0;
         IgnoreSIGPIPE = false;
       };
     };
